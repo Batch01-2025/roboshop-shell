@@ -8,6 +8,24 @@ dnf install nginx -y
 
 # Start and Enable Nginx Service
 
-systemctl enable nginx
-systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
+# Remove the default content that web server is serving
+rm -rf /usr/share/nginx/html/*
+
+# Download the frontend content
+sudo curl -o /tmp/frontend.zip https://roboshopartifacts.s3.amazonaws.com/frontend-v3.zip
+
+# Extract the frontend content
+cd /usr/share/nginx/html
+sudo unzip /tmp/frontend.zip
+
+# Copy the nginx config file
+sudo cp nginx.conf /etc/nginx/nginx.conf
+
+# Restart nginx
+sudo systemctl restart nginx
+#
+
 
