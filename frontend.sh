@@ -18,8 +18,7 @@ rm -rf /usr/share/nginx/html/*
 sudo curl -o /tmp/frontend.zip https://roboshopartifacts.s3.amazonaws.com/frontend-v3.zip
 
 # Extract the frontend content
-cd /usr/share/nginx/html
-sudo unzip /tmp/frontend.zip
+sudo unzip /tmp/frontend.zip -d /usr/share/nginx/html
 
 # Copy the nginx config file
 sudo cp nginx.conf /etc/nginx/nginx.conf
