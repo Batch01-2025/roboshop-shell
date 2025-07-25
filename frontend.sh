@@ -1,44 +1,44 @@
 #! /bin/bash
 
-PRINT "Disable Nginx Module"
+echo "Disable Nginx Module"
 sudo dnf module disable nginx -y
-status_print $?
+status_echo $?
 
-PRINT "Enable Nginx Module"
+echo "Enable Nginx Module"
 sudo dnf module enable nginx:1.24 -y
-status_print $?
+status_echo $?
 
-PRINT "Install Nginx"
+echo "Install Nginx"
 sudo dnf install nginx -y
-status_print $?
+status_echo $?
 
-PRINT "Start and Enable Nginx Service"
+echo "Start and Enable Nginx Service"
 sudo systemctl enable nginx
-status_print $?
+status_echo $?
 
-PRINT "Copy the nginx config file"
+echo "Copy the nginx config file"
 sudo cp nginx.conf /etc/nginx/nginx.conf
-status_print $?
+status_echo $?
 
-PRINT "Start Nginx Service"
+echo "Start Nginx Service"
 sudo systemctl start nginx
-status_print $?
+status_echo $?
 
-PRINT "Remove Nginx the default content"
+echo "Remove Nginx the default content"
 rm -rf /usr/share/nginx/html/*
-status_print $?
+status_echo $?
 
-PRINT "Download the frontend content"
+echo "Download the frontend content"
 sudo curl -o /tmp/frontend.zip https://roboshopartifacts.s3.amazonaws.com/frontend-v3.zip
-status_print $?
+status_echo $?
 
-PRINT "Extract the frontend content"
+echo "Extract the frontend content"
 sudo unzip /tmp/frontend.zip -d /usr/share/nginx/html
-status_print $?
+status_echo $?
 
-PRINT "Restart nginx"
+echo "Restart nginx"
 sudo systemctl restart nginx
-status_print $?
+status_echo $?
 
 
 
