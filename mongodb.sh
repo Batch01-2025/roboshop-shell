@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Copy Mongodb Repo file"
-cp mongodb.repo /etc/yum.repos.d/mongo.repo
+cp mongo.repo /etc/yum.repos.d/mongo.repo
 echo "Exit Status: $?"
 
 echo " Install Mongodb server"
