@@ -29,7 +29,8 @@ sudo unzip /tmp/catalogue.zip -d /app
 echo "Exit status: $?"
 
 echo "Installing npm dependencies"
-sudo npm install /app
+#sudo
+npm install /app
 echo "Exit status: $?"
 
 echo "Setup the catalogue service"
