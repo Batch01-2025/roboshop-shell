@@ -45,7 +45,7 @@ sudo systemctl start catalogue
 echo "Exit status: $?"
 
 echo "Copy MongoDB Client Repo"
-sudo cp mongodb.repo /etc/yum.repos.d/mongo.repo
+sudo cp mongo.repo /etc/yum.repos.d/mongo.repo
 echo "Exit status: $?"
 
 echo "Install MongoDB Client"
