@@ -22,13 +22,14 @@ echo "Exit status: $?"
 
 echo "Download the application code"
 sudo curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
-sudo cd /app
-sudo unzip /tmp/catalogue.zip
+echo "Exit status: $?"
+
+echo "Extracting the Application Code"
+sudo unzip /tmp/catalogue.zip -d /app
 echo "Exit status: $?"
 
 echo "Installing npm dependencies"
-sudo cd /app
-sudo npm install
+sudo npm install /app
 echo "Exit status: $?"
 
 echo "Setup the catalogue service"
@@ -41,6 +42,7 @@ echo "Exit status: $?"
 
 echo "Enable and Start the Catalogue Service"
 sudo systemctl enable catalogue
+echo "Exit status: $?"
 sudo systemctl start catalogue
 echo "Exit status: $?"
 
