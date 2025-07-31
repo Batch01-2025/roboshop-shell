@@ -57,7 +57,7 @@ sudo dnf install mongodb-mongosh -y
 echo "Exit status: $?"
 
 echo "Load Master Data"
-sudo mongosh --host 172.31.93.102 </app/db/master-data.js
+sudo mongosh --host 172.31.93.38 </app/db/master-data.js
 echo "Exit status: $?"
 
 
