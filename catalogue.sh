@@ -21,7 +21,7 @@ sudo mkdir /app
 echo "Exit status: $?"
 
 echo "Download the application code"
-sudo curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
+sudo curl -o /~/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
 echo "Exit status: $?"
 
 echo "Extracting the Application Code"
