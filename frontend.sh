@@ -29,11 +29,11 @@ rm -rf /usr/share/nginx/html/*
 echo "Exit status: $?"
 
 echo "Download the frontend content"
-sudo curl -o /tmp/frontend.zip https://roboshopartifacts.s3.amazonaws.com/frontend-v3.zip
+sudo curl -o /~/frontend.zip https://roboshopartifacts.s3.amazonaws.com/frontend-v3.zip
 echo "Exit status: $?"
 
 echo "Extract the frontend content"
-sudo unzip /tmp/frontend.zip -d /usr/share/nginx/html
+sudo unzip /~/frontend.zip -d /usr/share/nginx/html
 echo "Exit status: $?"
 
 echo "Restart nginx"
