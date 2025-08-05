@@ -29,11 +29,19 @@ NODEJS() {
 APP_SETUP() {
 
   echo "Adding the user"
-  sudo useradd roboshop
+  id roboshop
+  if [ $? -ne 0]
+  then
+    sudo useradd roboshop
+  fi
+
   echo "Exit status: $?"
 
   echo " creating Directory app"
-  sudo mkdir /app
+  if [ ! -d "/app" ]
+  then
+      sudo mkdir /app
+  fi
   echo "Exit status: $?"
 
   echo "Download the application code"
