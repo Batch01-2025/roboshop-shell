@@ -71,3 +71,25 @@ sudo systemctl start $component
 echo "Exit status: $?"
 
 }
+
+JAVA(){
+  echo "install Java"
+  sudo dnf install java-1.8.0-openjdk -y
+  echo "Exit status: $?"
+
+  echo "Install Maven"
+  sudo dnf install maven -y
+  echo "Exit status: $?"
+
+  APP_SETUP
+
+  echo "Install Dependencies"
+  cd /app
+  sudo mvn clean package
+  sudo mv target/shipping-1.0.jar shipping.jar
+  echo "Exit status: $?"
+
+  SYSTEMD_SETUP
+
+}
+
