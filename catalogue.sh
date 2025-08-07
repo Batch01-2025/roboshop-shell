@@ -1,6 +1,7 @@
 #! /bin/bash
 source ./common.sh
 component=catalogue
+path=$(pwd)
 
 NODEJS
 
