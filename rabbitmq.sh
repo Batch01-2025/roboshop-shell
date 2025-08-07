@@ -1,7 +1,8 @@
 #! /bin/bash
+path=$(pwd)
 
 echo "Copy the Repo file "
-sudo cp rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
+sudo cp $path/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
 echo "Exit Status: $?"
 
 echo "Install Rabbitmq Server"
