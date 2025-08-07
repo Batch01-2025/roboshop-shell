@@ -56,7 +56,7 @@ APP_SETUP() {
 SYSTEMD_SETUP() {
 
 echo "Setup the $component service"
-sudo cp ~/roboshop-shell/$component.service /etc/systemd/system/$component.service
+sudo cp /~/roboshop-shell/$component.service /etc/systemd/system/$component.service
 echo "Exit status: $?"
 
 echo "Load the Service"
