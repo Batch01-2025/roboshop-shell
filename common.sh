@@ -56,7 +56,7 @@ APP_SETUP() {
 
 SYSTEMD_SETUP() {
 
-echo "Setup the catalogue service"
+echo "Setup the $component service"
 sudo cp $component.service /etc/systemd/system/$component.service
 echo "Exit status: $?"
 
@@ -64,7 +64,7 @@ echo "Load the Service"
 sudo systemctl daemon-reload
 echo "Exit status: $?"
 
-echo "Enable and Start the Catalogue Service"
+echo "Enable and Start the $component Service"
 sudo systemctl enable $component
 echo "Exit status: $?"
 sudo systemctl start $component
