@@ -36,6 +36,7 @@ echo "Exit status: $?"
 
 echo "Extract the frontend content"
 sudo unzip $path/frontend.zip -d /usr/share/nginx/html
+echo "Exit status: $?"
 sudo rm -f $path/frontend.zip
 echo "Exit status: $?"
 
