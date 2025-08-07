@@ -30,10 +30,9 @@ APP_SETUP() {
 
   echo "Adding the user"
   id roboshop
-  if [ $? -ne 0]
-  then
+    if [ $? -ne 0 ]; then
     sudo useradd roboshop
-  fi
+    fi
 
   echo "Exit status: $?"
 
