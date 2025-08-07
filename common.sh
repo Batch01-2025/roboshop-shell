@@ -55,10 +55,9 @@ APP_SETUP() {
 
 SYSTEMD_SETUP() {
 
-dir_path=$(pwd)
 
 echo "Setup the $component service"
-sudo cp /$dir_path/$component.service /etc/systemd/system/$component.service
+sudo cp /$path/$component.service /etc/systemd/system/$component.service
 echo "Exit status: $?"
 
 echo "Load the Service"

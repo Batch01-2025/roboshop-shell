@@ -1,6 +1,7 @@
 #! /bin/bash
 source ./common.sh
 component=dispatch
+path=$(pwd)
 
 echo "Install Go Lang"
 sudo dnf install golang -y
