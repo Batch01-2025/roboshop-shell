@@ -1,6 +1,7 @@
 #! /bin/bash
 source ./common.sh
 component=payment
+path=$(pwd)
 
 echo "Install Python3, GCC and Python3 Development Libraries"
 sudo dnf install python3 gcc python3-devel -y
