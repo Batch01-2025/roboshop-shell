@@ -14,11 +14,11 @@ mysql -h 172.31.25.158 -uroot -pRoboShop@1 < /app/db/schema.sql
 echo "Exit status: $?"
 
 echo "Creating App User"
-mysql -h 172.31.25.158 -uroot -pRoboShop@1 < /app/db/appuser.sql
+mysql -h 172.31.25.158 -uroot -pRoboShop@1 < /app/db/app-user.sql
 echo "Exit status: $?"
 
 echo "Load Master Data"
-mysql -h 172.31.25.158 -uroot -pRoboShop@1 < /app/db/masterdata.sql
+mysql -h 172.31.25.158 -uroot -pRoboShop@1 < /app/db/master-data.sql
 echo "Exit status: $?"
 
 echo "Restarting Shipping Service"
